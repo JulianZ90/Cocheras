@@ -1,0 +1,30 @@
+Instalar DockerToolBox
+Bajar un docker-compose.yml que tenga los containers
+Ejecutar docker-compose up (en el directorio del archivo)
+En el kitematic va a aparecer los containers
+
+
+
+1-Desde el kitematic levantar un cliente docker.
+2-Ejecutar $docker build -t dockerfile .
+
+3- docker-compose build
+   docker-compose up
+
+
+---------***********-----------
+1-Descargar el proyecto
+2-npm install
+3-webpack
+4-npm start
+
+
+
+
+
+
+
+-----------------*****------------------
+
+Para importar el schema seguir el siguente ejemplo de sequelize-auto
+  ---> https://github.com/sequelize/sequelize-auto
