@@ -16,14 +16,20 @@ class Button extends React.Component {
   }
 
   get(){
-    fetch('http://172.16.82.136:4567/hello')
-    // .then( response  => {
-    //   return response.json()
-    // })
+    fetch('http://localhost:4567/hello')
+     .then( response  => {
+      return response.json();
+     })
+     .then(function(parsedData) {
+       var jason = JSON.stringify(parsedData)
+       return jason ;
+})
   }
 
   mostrarRespuesta(){
       var formulario = document.getElementById("app");
+      var respuesta = this.get();
+      console.log('respuesta: ' + respuesta);
       formulario.innerHTML = this.get();
   }
   render() {
