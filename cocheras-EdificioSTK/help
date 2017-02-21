@@ -15,6 +15,7 @@ En el kitematic va a aparecer los containers
 ---------***********-----------
 1-Descargar el proyecto
 2-npm install
+  2.1- Si no esta instalado webpack ejecutar npm install -s webpack, luego npm install -g webpack
 3-webpack
 4-npm start
 
