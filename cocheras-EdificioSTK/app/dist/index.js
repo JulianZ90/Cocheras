@@ -7,7 +7,6 @@ class Button extends React.Component {
   constructor(props){
     super(props);
     this.get = this.get.bind(this);
-    this.mostrarRespuesta = this.mostrarRespuesta.bind(this);
   }
 
   vaciar(){
@@ -16,19 +15,16 @@ class Button extends React.Component {
   }
 
   get(){
-    fetch('http://172.16.82.136:4567/hello')
-    // .then( response  => {
-    //   return response.json()
-    // })
-  }
-
-  mostrarRespuesta(){
-      var formulario = document.getElementById("app");
-      formulario.innerHTML = this.get();
+    fetch('http://localhost:3000/wines',)
+    .then( response  => {
+      response.json().
+    then(r=>{
+      console.log(r)
+    })})
   }
   render() {
     return (
-      <input type="button" value="OK" id="btn" class ="boton" onClick = {this.mostrarRespuesta}/>
+      <input type="button" value="OK" id="btn" class ="boton" onClick = {this.get}/>
     );
   }
 }
