@@ -15,12 +15,21 @@ class Button extends React.Component {
   }
 
   get(){
-    fetch('http://localhost:3000/wines',)
-    .then( response  => {
-      response.json().
-    then(r=>{
-      console.log(r)
-    })})
+    fetch('http://localhost:4567/hello')
+     .then( response  => {
+      return response.json();
+     })
+     .then(function(parsedData) {
+       var jason = JSON.stringify(parsedData)
+       return jason ;
+     })
+  }
+
+  mostrarRespuesta(){
+      var formulario = document.getElementById("app");
+      var respuesta = this.get();
+      console.log('respuesta: ' + respuesta);
+      formulario.innerHTML = this.get();
   }
   render() {
     return (
